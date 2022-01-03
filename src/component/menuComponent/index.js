@@ -114,9 +114,11 @@ download = (e) => {
                         <div className='child-card-menu'>
                         {
                             this.state.data.map((data, index) => {
-                                return (
-                                    <div className="cardImage" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.img, data.html, data.style)}></i></div>
-                                    )
+                                if(data.title === "navbar") {
+                                    return (
+                                        <div className="cardImage-navbar" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.title, data.img, data.html, data.style)}></i></div>
+                                        )
+                                    }
                                 })
                             }
                         </div>
@@ -126,9 +128,11 @@ download = (e) => {
                         <div className='child-card-menu'>
                        {
                             this.state.data.map((data, index) => {
+                                if(data.title === "hero") {
                                 return (
-                                    <div className="cardImage" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.img, data.html, data.style)}></i></div>
-                                )
+                                    <div className="cardImage" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.title, data.img, data.html, data.style)}></i></div>
+                                    )
+                                }
                             })
                         }
                         </div>
@@ -138,9 +142,11 @@ download = (e) => {
                         <div className='child-card-menu'>
                        {
                             this.state.data.map((data, index) => {
+                                if(data.title === "content") {
                                 return (
-                                    <div className="cardImage" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.img, data.html, data.style)}></i></div>
-                                )
+                                    <div className="cardImage-content" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.title, data.img, data.html, data.style)}></i></div>
+                                    )
+                                }
                             })
                         }
                         </div>
@@ -150,9 +156,11 @@ download = (e) => {
                         <div className='child-card-menu'>
                        {
                             this.state.data.map((data, index) => {
+                                if(data.title === "footer") {
                                 return (
-                                    <div className="cardImage" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.img, data.html, data.style)}></i></div>
-                                )
+                                    <div className="cardImage-footer" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.title, data.img, data.html, data.style)}></i></div>
+                                    )
+                                }
                             })
                         }
                         </div>
@@ -163,7 +171,7 @@ download = (e) => {
                        {
                             this.state.data.map((data, index) => {
                                 return (
-                                    <div className="cardImage" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.img, data.html, data.style)}></i></div>
+                                    <div className="cardImage" key={index}><img src={`https://images-builder.vercel.app/img/${data.img}`} alt="img-component" /><i className='fas fa-plus' onClick={() => this.props.createComponent(data.title, data.img, data.html, data.style)}></i></div>
                                 )
                             })
                         }

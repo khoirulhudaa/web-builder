@@ -89,9 +89,23 @@ export default class FrameOutput extends Component {
               <div className='wrap-listComponentUsed'>
                 {
                   this.props.dataComponentUsed.map((data, index) => {
-                    return (
-                      <div className="cardImage" key={index}><img src={`${data}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
-                    )
+                    if(data.title === 'navbar') {
+                      return (
+                          <div className="cardImage-navbar" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                        )
+                      }else if(data.title === 'hero') {
+                        return (
+                          <div className="cardImage" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                      )
+                      }else if(data.title === 'content') {
+                        return (
+                          <div className="cardImage-content" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                      )
+                      }else if(data.title === 'footer') {
+                        return (
+                          <div className="cardImage-footer" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                      )
+                    }
                   })
                 }
               </div>
@@ -109,11 +123,25 @@ export default class FrameOutput extends Component {
             </div>
             }
               <div className='wrap-listComponentUsed'>
-                {
+              {
                   this.props.dataComponentUsed.map((data, index) => {
-                    return (
-                      <div className="cardImage" onClick={() => this.remove(index)} key={index}><img src={`${data}`} alt="img-component" /><i className='fas fa-trash'></i></div>
-                    )
+                    if(data.title === 'navbar') {
+                      return (
+                          <div className="cardImage-navbar" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                        )
+                      }else if(data.title === 'hero') {
+                        return (
+                          <div className="cardImage" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                      )
+                      }else if(data.title === 'content') {
+                        return (
+                          <div className="cardImage-content" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                      )
+                      }else if(data.title === 'footer') {
+                        return (
+                          <div className="cardImage-footer" key={index}><img src={`${data.image}`} alt="img-component" /><i className='fas fa-trash' onClick={() => this.remove(index)}></i></div>
+                      )
+                    }
                   })
                 }
               </div>
@@ -122,28 +150,8 @@ export default class FrameOutput extends Component {
         <div className='frameOutput'>
             <div className="templateCurrent">
                 <style className="styles">
-                  {/* {
-                    this.props.dataStyle.length ? (
-                      this.props.dataStyle.map((dataStyle) => {
-                        return (
-                          dataStyle
-                          )
-                      })
-                    ):
-                    null
-                  } */}
                 </style>
                 <div className="template">
-                {/* {
-                   this.props.dataHTML.length ? (
-                     this.props.dataHTML.map((dataHTML) => {
-                       return (
-                         dataHTML
-                         )
-                        })
-                    ):
-                    null
-                } */}
                 </div>
             </div>
         </div>
