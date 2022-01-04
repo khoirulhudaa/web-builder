@@ -3,7 +3,6 @@ import './App.css';
 import MenuComponent from './component/menuComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FrameOutput from './component/frameOutput';
-import Data from './dataComponent/index.json';
 import Alert1 from './assets/images/png/alert1.png';
 
 export default class App extends React.Component {
@@ -103,7 +102,7 @@ export default class App extends React.Component {
   render() {
     // state dan function yang dikirim ke html
     const {createComponent} = this;
-    const {dataStyle, dataHTML, dataImages, dataTitle} = this.state;
+    const {dataStyle, dataHTML, dataImages} = this.state;
     return (
       <>
         {

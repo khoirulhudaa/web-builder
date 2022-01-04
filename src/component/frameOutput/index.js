@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Data from '../../dataComponent/index.json';
+import Logo from '../../assets/images/drag/Drag-me-JPG-logoonly.jpg';
 
 export default class FrameOutput extends Component {
   constructor(props) {
@@ -148,7 +149,13 @@ export default class FrameOutput extends Component {
           </div>
         }
         <div className='frameOutput'>
-            <div className="templateCurrent">
+          {
+            !this.props.dataHTML.length ? (
+              <img src={Logo} alt="logo-dragMe" className="logo-drag" />
+                ):
+              null
+          }
+              <div className="templateCurrent">
                 <style className="styles">
                 </style>
                 <div className="template">

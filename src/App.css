@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 ::-webkit-scrollbar {
@@ -401,6 +401,7 @@
   margin-left: auto;
   padding-top: 20px;
   margin-right: auto;
+  font-weight: bold;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -416,6 +417,17 @@
   cursor: pointer;
   box-shadow: 1px 4px 12px rgba(194, 194, 194, 0.589);
   transform: scale(0.88);
+}
+
+.logo-drag {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 99999px;
+  left: 50%;
+  top: 50%;
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
 }
 
 .frameOutput {
@@ -534,4 +546,22 @@
   font-size: 16px;
   text-align: center; 
   width: 50vw;
+}
+
+@media screen and (max-width: 650px) {
+  .alert-page img {
+    width: 89vw;
+  }
+
+  .alert-page h1 {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(0.96);
+    text-align: center;
+  }
+
+  .alert-page p {
+    width: 90vw;
+  }
 }
