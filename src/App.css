@@ -54,8 +54,8 @@
 .child-card-menu {
   height: max-content;
   overflow: scroll;
-  height: 90%;
-  margin-top: auto;
+  height: 100%;
+  margin-top: 20px;
   margin-bottom: auto;
 }
 
@@ -67,7 +67,7 @@
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  border-radius: 16px;
+  border-radius: 16px 16px 0px 0px;
   --tw-shadow: 10px 0px 40px rgba(151, 151, 151, 0.151);
   box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
   margin-bottom: 40px;
@@ -83,6 +83,16 @@
   transform: rotate(45deg);
   content: '';
   top: 8%;
+}
+
+
+.wrap-ListComponent {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  border-radius: 20px;
+  scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 .cardImage {
@@ -420,8 +430,8 @@
 }
 
 .logo-drag {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   border-radius: 99999px;
   left: 50%;
@@ -475,7 +485,7 @@
   top: 60px;
   width: 310px;
   height: 600px;
-  border-radius: 16px;
+  border-radius: 16px 16px 0px 0px;
   --tw-shadow: 10px 0px 40px rgba(151, 151, 151, 0.151);
   box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
   margin-bottom: 40px;
