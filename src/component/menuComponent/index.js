@@ -69,13 +69,13 @@ componentDidMount = () => {
         document.querySelector('.menu5').classList.remove('show5')
     })
 
-    document.getElementById('pages').addEventListener('click', () => {
-        document.querySelector('.menu1').classList.remove('show1')
-        document.querySelector('.menu2').classList.remove('show2')
-        document.querySelector('.menu3').classList.remove('show3')
-        document.querySelector('.menu4').classList.remove('show4')
-        document.querySelector('.menu5').classList.add('show5')
-    })
+    // document.getElementById('pages').addEventListener('click', () => {
+    //     document.querySelector('.menu1').classList.remove('show1')
+    //     document.querySelector('.menu2').classList.remove('show2')
+    //     document.querySelector('.menu3').classList.remove('show3')
+    //     document.querySelector('.menu4').classList.remove('show4')
+    //     document.querySelector('.menu5').classList.add('show5')
+    // })
 }
 
 download = (e) => {
@@ -100,6 +100,15 @@ download = (e) => {
         icon: "success",
         timer: 1160,
         title: "Download Successfully", 
+        showConfirmButton: false 
+    });
+}
+
+notOpen = () => {
+    Swal.fire({
+        icon: "warning",
+        timer: 1160,
+        title: "Belum tersedia gaes", 
         showConfirmButton: false 
     });
 }
@@ -195,7 +204,7 @@ download = (e) => {
                     <i className="bx bx-collection"></i>
                     <b><p>Footer</p></b>
                 </div>
-                <div className="squareComponents" id='pages'>
+                <div className="squareComponents" onClick={() => this.notOpen()}>
                     <i className="bx bx-collection"></i>
                     <b><p>Pages</p></b>
                 </div>
