@@ -353,6 +353,7 @@
   transform: scale(0.1);
   z-index: -222222;
   transition: 0.4s;
+  padding-bottom: 30px;
   margin-left: -300px;
 }
 
