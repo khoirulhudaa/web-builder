@@ -10,7 +10,10 @@ export default class FrameOutput extends Component {
        dataComponentUsed: [],
        data: [],
        situation: false,
-       situation2: false
+       situation2: false,
+       js: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+       integrity: 'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
+       cross: 'anonymous'
     };
   };
 
@@ -162,6 +165,7 @@ export default class FrameOutput extends Component {
                 </style>
                 <div className="template">
                 </div>
+                <script src={this.state.js} integrity={this.state.integrity} crossorigin={this.state.cross}></script>
             </div>
         </div>
       </>
